@@ -1,5 +1,6 @@
 #include "particle/Application.hpp"
 #include <iostream>
+#include <cstdlib>
 
 
 int main(){
@@ -9,15 +10,15 @@ int main(){
         
         if(!app.initialize()){
             std::cerr << "Failed to initialize application" << std::endl;
-            return -1;
+            return EXIT_FAILURE;
         }
 
         app.run();
     
     }catch(const std::exception& e){
         std::cerr << "This error occured while running the application: " << e.what() << std::endl;
-        return -1;
+        return EXIT_FAILURE;
     }
 
-    return 0;
+    return EXIT_SUCCESS;
 }

@@ -1,10 +1,12 @@
 #include "particle/Application.hpp"
 #include <iostream>
 #include <memory>
+#include <cstdlib>
 
 bool Application::initialize() {
 
     initializeComponents();
+    return true;
 
 }
 
